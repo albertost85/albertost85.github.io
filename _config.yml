@@ -31,8 +31,8 @@ url: "https://www.farewellway.com"
 github:
   username: albertost85 # change to your github username
 
-twitter:
-  username: twitter_username # change to your twitter username
+#twitter:
+  #username: twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
@@ -80,7 +80,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/logo.png
+avatar: /assets/imgages/logo.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
