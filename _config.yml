@@ -27,6 +27,9 @@ description: This is a personal webpage designed to link content created on othe
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://www.farewellway.com"
+# jekyll-sitemap to generate automatically sitemap
+plugins:
+  - jekyll-sitemap
 
 github:
   username: albertost85 # change to your github username

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stage 00: Roncesvalles
+title: Stage 00, Roncesvalles
 date: 2014-07-20 08:58:12 -0000
 categories: [Way of Saint James, 00_Roncesvalles]
 tags: [Way of Saint James, Pilgrimage, Stage 00, Navarre, Roland, Roncesvalles]
