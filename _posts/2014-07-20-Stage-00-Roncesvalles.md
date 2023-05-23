@@ -2,10 +2,10 @@
 layout: post
 title: Stage 00, Roncesvalles
 date: 2014-07-20 08:58:12 -0000
-categories: [Way of Saint James, 00_Roncesvalles]
+categories: [Travel, Way of Saint James]
 tags: [Way of Saint James, Pilgrimage, Stage 00, Navarre, Roland, Roncesvalles]
 ---
-# Stage 00: Roncesvalles
+# Startup Stage: Roncesvalles
 
 The day has arrived. You haven't done anything special or heroic; it has simply arrived. You got up not too early, had breakfast like any other day - except, perhaps, for that slight discomfort you feel in your stomach every time you break from your routine - and, after taking one last look at the luggage, already prepared since the day before, you got into the car.
 
