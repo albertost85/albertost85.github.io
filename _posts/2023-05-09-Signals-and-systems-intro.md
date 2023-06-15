@@ -35,13 +35,11 @@ In contexts ranging from signal processing and communications to electromechanic
 Communication only makes sense using signals that, in some way, are random. Although not useful in communication, deterministic signals serve as the conceptual foundation for studying the next type of signals, as they share some properties.
 
 ### Based on their energy
-- Finite energy. Ideal signals, or signals existing only at a specific period of time.
-: \begin{equation}
+- Finite energy: Ideal signals, or signals existing only at a specific period of time. \begin{equation}
 	W_x=\int_{-\infty}^{\infty} x(t)^2 \mathop{dt} < \infty
 \end{equation}
 
-- Finite average power. When dealing with periodical signals, it is worth to define those whose energy in a period of time is limited to a certain value.
-: \begin{equation}
+- Finite average power: When dealing with periodical signals, it is worth to define those whose energy in a period of time is limited to a certain value. \begin{equation}
 	P_T=\lim_{T\rightarrow \infty}\frac{1}{T} \int_{-T/2}^{T/2} x(t)^2 \mathop{dt} < \infty
 \end{equation}
 
@@ -50,25 +48,25 @@ Communication only makes sense using signals that, in some way, are random. Alth
 - Domain: Signals can be classified as continuous or discrete based on the domain, which is the set of time instances in which the signal is defined.
 - Range: Signals can be classified as analog or digital based on the range, which is the set of values the signal can take within its domain.
 
-<div style="display: flex; justify-content: center; align-items: center;">
-    <div style="width: 45%;">
-        <img src="Signal_Analog.png" alt="Signal Analog" style="width: 100%;">
+<div style="display: flex; justify-content: center; align-items: center; width= 100%;">
+    <div>
+        <img src="Signal_Analog.svg" alt="Signal Analog">
         <p style="text-align: center;">(a) Analog Signal, continuous value range</p>
     </div>
-    <div style="width: 45%;">
-        <img src="Signal_Mantained.png" alt="Signal Mantained" style="width: 100%;">
-        <p style="text-align: center;">(b) Maintained Signal, discrete value range</p>
+    <div>
+        <img src="Signal_Holded.svg" alt="Signal Holded">
+        <p style="text-align: center;">(b) Holded Signal, discrete value range</p>
     </div>
 </div>
 <p style="text-align: center;">Figure: Continuous Signals in the Time Domain</p>
 
-<div style="display: flex; justify-content: center; align-items: center;">
-    <div style="width: 45%;">
-        <img src="Signal_Sampled.png" alt="Signal Sampled" style="width: 100%;">
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <div>
+        <img src="Signal_Sampled.svg" alt="Signal Sampled">
         <p style="text-align: center;">(a) Sampled Signal, continuous value range</p>
     </div>
-    <div style="width: 45%;">
-        <img src="Signal_Digital.png" alt="Signal Digital" style="width: 100%;">
+    <div>
+        <img src="Signal_Digital.svg" alt="Signal Digital">
         <p style="text-align: center;">(b) Digital Signal, discrete value range</p>
     </div>
 </div>
@@ -82,7 +80,7 @@ Input of an ADC is called *Sampler* typically, a capacitance charged before each
 
 Another important parameter of an ADC is the conversion frequency. It can be fixed or it can be related to the input difference. Deppending on the architecture, conversion happens until a certain level of error is granted, up to a maximal conversion time. That makes the output of an ADC a *Digital Signal*: both, range (values) are discrete and changes happen at quantified domain moments (periods of time).
 
-An example of a discrete-range and continuous-time system might be the ouput of a DAC *Digital to Analog Converter*. The output values are discrete because input values (typically from a digital system like a microcontroller or a computer) are binary. But the output of a DAC is a signal continuous over its domain (time). It is an example of *Mantained Signal* in the images.
+An example of a discrete-range and continuous-time system might be the ouput of a DAC *Digital to Analog Converter*. The output values are discrete because input values (typically from a digital system like a microcontroller or a computer) are binary. But the output of a DAC is a signal continuous over its domain (time). It is an example of *Holded Signal* in the images.
 
 
 
@@ -93,14 +91,14 @@ Based on the distribution of amplitude across frequencies:
 - Band-pass: Amplitudes are significant only in an intermediate range of the spectrum.
 - Band-stop: Amplitudes are significant in the entire spectrum except for an intermediate range.
 
-### Causality
+### Based on casualty
 - Causal system: A system is causal if its output at any given time depends only on input values at the present moment and in the past.
 \begin{equation}
 x(t) = 0 \quad \forall t < 0
 \end{equation}
 - Non-causal systems: Although causal systems are of great importance, they are not the only systems that are of practical interest. For example, causality is not fundamentally important in applications like image processing, where the independent variable is not time. When working with pre-recorded data, i.e., when not operating in real-time, there is no obligation to process the data causally.
 
-### Other aspects
+### Other critera
 - Time-limited signals. This is conceptually linked to Finite energy signals.
 - Even signals:
 \begin{equation}
