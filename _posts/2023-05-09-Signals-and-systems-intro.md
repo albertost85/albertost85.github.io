@@ -10,7 +10,7 @@ img_path: /assets/img/
 This is the content of an introductory lesson to Signals. It lacks the introduction to System concept. But Systems will not be introduced until mid semester.
 
 Time: Exposition time: about 30 minutes.
-
+# What is a signal?
 ## Some definitions
 
 Signal.
