@@ -27,6 +27,8 @@ But now that several years have passed, I can tell you something that I know and
 
 During the registration process, a cheerful, older man with little faith takes your information, collects payment for the stay, and assigns pilgrim accommodations. You are given a choice between a crowded bunkhouse in the old hostel or a less crowded plastic tent located in a nearby clearing. You choose the latter, as it seems like a quieter place to rest.
 
+As it's barely noon and you want to spend as much time together as possible, you decide to do some sightseeing in the area. You go to visit the town of Obanos, about 40 kilometers away. Perhaps others know it for its fortified church or the theatrical representation that is staged once a year in its square under the name of "The Mystery of Obanos", but you know it from the extensive publicity your philosophy teacher from school, a local of the place, has given it.
+
 You also take the opportunity to visit Eunate, a mythicized Templar chapel located a few kilometers from the town. To you, more than esoteric, its irregular architecture reminds you more of the rough and shoddy baldachins that you saw in the also Templar hermitage of San Juan in Soria, attributable to the scarce architectural knowledge of the Order in its beginnings, and not to esoteric reasons.
 
 Back in Roncesvalles, you decide to pick up your backpack from the car and leave it in the plastic barrack where you will finally spend the night. The surprise is that it seems much nicer than you expected, with only three bunk beds it cannot be considered crowded by Camino standards and, what excites you the most, you are currently the only occupant and you pray to stay that way.
