@@ -4,7 +4,7 @@ self.addEventListener('install', (event) => {
         caches.open('v1').then((cache) => {
             return cache.addAll([
                 '/',
-                '/machine_bt.html',
+                '/index.html',
                 '/AT00019929.svg',
                 '/css/main.css',
                 '/js/main.js',

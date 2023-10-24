@@ -1,9 +1,3 @@
-// keyboard style from https://codepen.io/irajsuhail/pen/mYMZVm
-// led matrix style from https://codepen.io/djan/pen/gOWdqo
-
-
-
-
 const REG_MAX_LENGTH = 256;
 const TIMEOUT_UPDATE_INTERVAL = 500; // Interval update in milliseconds
 const MAX_TIMEOUT_COUNTER = 100; // Timer in seconds for connection timeout.
@@ -24,13 +18,9 @@ buttonDisconnect.addEventListener('click', handleBluetoothDisconnect);
 // Get a reference to the SVG element
 const svgElevator = document.getElementById('svg_elevator');
 var svgDoc = null;
+var preventReconnect = false;
 
 
-
-
-
-// const mycheckbox = document.getElementById('settings_visibility');
-// mycheckbox.addEventListener('change', settings_visibility_change);
 
 
 var bluetoothDevice; // Careful, is to handle disconnection from a button. newly created and not necesarely to work.
@@ -71,7 +61,7 @@ function timeout_clear() {
 
 // main.js
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/js/sw.js').then((registration) => {
+    navigator.serviceWorker.register('js/sw.js').then((registration) => {
         console.log('Service Worker registered:', registration);
     }).catch((error) => {
         console.error('Service Worker registration failed:', error);
@@ -406,8 +396,6 @@ class Access7 {
 }
 
 
-//Momentary7
-
 class Flags_60_7 {
 	constructor() {
 		this.spare3 = 0;
@@ -488,27 +476,6 @@ class Trip_60_7 {
 		this.pastLanding = 0;
 	}
 }
-
-
-// MomentaryData7 enums
-const eEventType_60_7 = {
-	e60_7_EVENTTYPE_HEARTBEAT: 0,
-	e60_7_EVENTTYPE_JOB: 1,
-	e60_7_EVENTTYPE_POWERUP: 2,
-	e60_7_EVENTTYPE_POWERDOWN: 3,
-	e60_7_EVENTTYPE_ALARM: 4,
-	e60_7_EVENTTYPE_BLOCKED: 5
-};
-
-class MomentaryData7 {
-	constructor(blockType, blockFormat, blockLength) {
-		this.blockHeader = new BlockHeader(blockType, blockFormat, blockLength);
-		this.eventType = eEventType_60_7.e60_7_EVENTTYPE_HEARTBEAT;
-		this.trip = new Trip_60_7();
-		this.status = new Status_60_7();
-	}
-}
-
 
 //Access1
 class Flags_44_1 {
@@ -787,6 +754,49 @@ class Io5{
 		this.io = new INPUT_IO_49_5();
 	}
 }
+class MOMENTARY_DATA_DATA {
+	constructor(){
+		this.movementDirection = 0;
+		this.estimatedPositionMeters = 0;
+		this.estimatedPositionPercent = 0;
+		this.speed = 0;
+		this.platformNumber = 0;
+		this.inPlatform = 0;
+		this.load = 0;
+		this.averageLoadUp = 0;
+		this.averageLoadDown = 0;
+		this.lastLoadUp = 0;
+		this.lastLoadDown = 0;
+		this.temperature = 0;
+		this.humidity = 0;
+		this.actualCycle = 0;
+		this.dCControlVoltage = 0;
+		this.cPUTemperature = 0;
+		this.alarm01 = 0;
+		this.alarm02 = 0;
+		this.alarm03 = 0;
+		this.alarm04 = 0;
+		this.alarm05 = 0;
+		this.alarm06 = 0;
+		this.alarm07 = 0;
+		this.alarm08 = 0;
+		this.alarm09 = 0;
+		this.alarm10 = 0;
+		this.alarm11 = 0;
+		this.alarm12 = 0;
+		this.alarm13 = 0;
+		this.alarm14 = 0;
+		this.alarm15 = 0;
+		this.alarm16 = 0;
+	}
+}
+
+class Momentary1{
+	constructor() {
+		this.blockHeader = new BlockHeader(eBlocktypes.MOMENTARY_DATA, 1, 72)
+		this.params = new MOMENTARY_DATA_DATA();
+	}
+}
 
 
 class Block {
@@ -844,10 +854,6 @@ class Block {
 				this.input = new INPUT_DIGITAL_IN_44_99();
 				this.output = new OUTPUT_44_99();
 			}
-		} else if (this.blockHeader.type == eBlocktypes.MOMENTARY_DATA) { //Momentary data
-			this.eventType = eEventType_60_7.e60_7_EVENTTYPE_HEARTBEAT;
-			this.trip = new Trip_60_7();
-			this.status = new Status_60_7();
 		}else if(this.blockHeader.type == eBlocktypes.TRACELOG){
 			this.type = eG_Type_229_2.NONE;
 			this.grade = eG_Grade_229_2.NONE;
@@ -858,6 +864,9 @@ class Block {
 			this.display1 = new Display_64_2();
 			this.display2 = new Display_64_2();
 			this.io = new IO_64_2();
+		}
+		else if(this.blockHeader.type == eBlocktypes.MOMENTARY_DATA){
+			this.params = new MOMENTARY_DATA_DATA();
 		}
 		else if(this.blockHeader.type == eBlocktypes.IO){
 			this.io = new INPUT_IO_49_5();
@@ -982,51 +991,38 @@ class Block {
 			this.io.o_RL5_C = (((view.getUint8(9, true)) >>  7) & 0x01);
 		} else if (this.blockHeader.type == eBlocktypes.MOMENTARY_DATA) { //Momentary data
 			const view = new DataView(this.data.buffer);
-
-			this.eventType = view.getUint8(0);
-			this.trip.type = view.getUint8(1);
-			this.trip.targetLanding = view.getUint8(2);
-			this.trip.currentLanding = view.getUint8(3);
-			this.trip.pastLanding = view.getUint8(4);
-			this.status.timeSinceStart = view.getUint32(8, true);
-			this.status.distanceTraveled = view.getUint32(12, true);
-			this.status.position = view.getInt32(16, true);
-			this.status.currentSpeed = view.getInt16(20, true);
-			this.status.targetSpeed = view.getInt16(22, true);
-			this.status.voltageDC = view.getUint16(24, true);
-			this.status.battery = view.getUint16(26, true);
-			this.status.batteryChargingVoltage = view.getUint16(28, true);
-			this.status.internalTemperature = view.getInt16(30, true);
-			this.status.loadcell1 = view.getInt16(32, true);
-			this.status.loadcell2 = view.getInt16(34, true);
-
-			this.status.flags.emgInBase       = (((view.getUint32(36, true)) >> 19) & 0x01);
-			this.status.flags.cageOnly        = (((view.getUint32(36, true)) >> 20) & 0x01);
-			this.status.flags.overload        = (((view.getUint32(36, true)) >> 21) & 0x01);
-			this.status.flags.fullLoad        = (((view.getUint32(36, true)) >> 22) & 0x01);
-			this.status.flags.gas             = (((view.getUint32(36, true)) >> 23) & 0x01);
-			this.status.flags.flood           = (((view.getUint32(36, true)) >> 24) & 0x01);
-			this.status.flags.highWind        = (((view.getUint32(36, true)) >> 25) & 0x01);
-			this.status.flags.blockedLift     = (((view.getUint32(36, true)) >> 26) & 0x01);
-			this.status.flags.moving          = (((view.getUint32(36, true)) >> 27) & 0x01);
-			this.status.flags.doorOpen        = (((view.getUint32(36, true)) >> 28) & 0x01);
-			this.status.flags.calibrationMode = (((view.getUint32(36, true)) >> 29) & 0x01);
-			this.status.flags.programmingMode = (((view.getUint32(36, true)) >> 30) & 0x01);
-			this.status.flags.inspectionMode  = (((view.getUint32(36, true)) >> 31) & 0x01);
-
-			this.status.alarm.encoderError     = (((view.getUint32(40, true)) >> 20) & 0x01);
-			this.status.alarm.temperatureFault = (((view.getUint32(40, true)) >> 21) & 0x01);
-			this.status.alarm.calibrationFault = (((view.getUint32(40, true)) >> 22) & 0x01);
-			this.status.alarm.configError      = (((view.getUint32(40, true)) >> 23) & 0x01);
-			this.status.alarm.ctrlCircuit      = (((view.getUint32(40, true)) >> 24) & 0x01);
-			this.status.alarm.speedFault       = (((view.getUint32(40, true)) >> 25) & 0x01);
-			this.status.alarm.lockFault        = (((view.getUint32(40, true)) >> 26) & 0x01);
-			this.status.alarm.eNLockError      = (((view.getUint32(40, true)) >> 27) & 0x01);
-			this.status.alarm.doorError        = (((view.getUint32(40, true)) >> 28) & 0x01);
-			this.status.alarm.motorError       = (((view.getUint32(40, true)) >> 29) & 0x01);
-			this.status.alarm.safetyCircuit    = (((view.getUint32(40, true)) >> 30) & 0x01);
-			this.status.alarm.adaptiveError    = (((view.getUint32(40, true)) >> 31) & 0x01);
-
+			this.params.movementDirection = view.getUint8(0);
+			this.params.estimatedPositionMeters = view.getUint32(4);
+			this.params.estimatedPositionPercent = view.getUint32(8);
+			this.params.speed = view.getInt32(12);
+			this.params.platformNumber = view.getInt32(16);
+			this.params.inPlatform = view.getUint8(20);
+			this.params.load = view.getUint16(24);
+			this.params.averageLoadUp = view.getUint16(26);
+			this.params.averageLoadDown = view.getUint16(28);
+			this.params.lastLoadUp = view.getUint16(30);
+			this.params.lastLoadDown =view.getUint16(32);
+			this.params.temperature = view.getUint32(36);
+			this.params.humidity = view.getUint32(40);
+			this.params.actualCycle = view.getUint32(44);
+			this.params.dCControlVoltage = view.getUint16(48);
+			this.params.cPUTemperature = view.getInt16(50);
+			this.params.alarm01 = view.getUint8(52);
+			this.params.alarm02 = view.getUint8(53);
+			this.params.alarm03 = view.getUint8(54);
+			this.params.alarm04 = view.getUint8(55);
+			this.params.alarm05 = view.getUint8(56);
+			this.params.alarm06 = view.getUint8(57);
+			this.params.alarm07 = view.getUint8(58);
+			this.params.alarm08 = view.getUint8(59);
+			this.params.alarm09 = view.getUint8(60);
+			this.params.alarm10 = view.getUint8(61);
+			this.params.alarm11 = view.getUint8(62);
+			this.params.alarm12 = view.getUint8(63);
+			this.params.alarm13 = view.getUint8(64);
+			this.params.alarm14 = view.getUint8(65);
+			this.params.alarm15 = view.getUint8(66);
+			this.params.alarm16 = view.getUint8(67);
 		}else if(this.blockHeader.type == eBlocktypes.TRACELOG){
 			const view = new DataView(this.data.buffer);
 
@@ -1184,6 +1180,20 @@ class Block {
 				// simInput(2);
 			}
 		}else if(this.blockHeader.type == eBlocktypes.MOMENTARY_DATA){
+			document.getElementById("Alarm_1").checked = 	this.params.alarm01;
+			document.getElementById("Alarm_2").checked = 	this.params.alarm02;
+			document.getElementById("Alarm_3").checked = 	this.params.alarm03;
+			document.getElementById("Alarm_4").checked = 	this.params.alarm04;
+			document.getElementById("Alarm_5").checked = 	this.params.alarm05;
+			document.getElementById("Alarm_6").checked = 	this.params.alarm06;
+			document.getElementById("Alarm_7").checked = 	this.params.alarm07;
+			document.getElementById("Alarm_8").checked = 	this.params.alarm08;
+			document.getElementById("Alarm_9").checked = 	this.params.alarm09;
+			document.getElementById("Alarm_10").checked = 	this.params.alarm10;
+			document.getElementById("Alarm_11").checked = 	this.params.alarm11;
+			document.getElementById("Alarm_12").checked = 	this.params.alarm12;
+			svgDoc_AEC.getElementById("CPU_TEMP_TEXT").textContent = (this.params.cPUTemperature / 10) + " ºC";
+			svgDoc_AEC.getElementById("PCB_VOLT_TEXT").textContent = (this.params.dCControlVoltage / 10) + " V";
 			// //Update numbers
 			// document.getElementById("status_posistion").value              = this.status.position;
 			// document.getElementById("status_currentSpeed").value           = this.status.currentSpeed;
@@ -1255,7 +1265,7 @@ var access99 = new Block(44, 99, 16);
 
 var io5 = new Block(49,5,72);
 
-var momentary7 = new Block(60, 7, 48);
+var momentary1 = new Block(60, 7, 72);
 
 var tracelog = new Block(229, 2, 210);
 
@@ -1320,6 +1330,7 @@ function handleBluetoothFind(event) {
 			log("Device: " + device.id + " " + device.name);
 			bluetoothDevice = device; // New
 			bluetoothDevice.addEventListener('gattserverdisconnected', onDisconnected); // New
+			preventReconnect = false;
 			return device.gatt.connect();
 		})
 		.then(server => {
@@ -1361,7 +1372,7 @@ function handleBluetoothFind(event) {
 
 function handleBluetoothDisconnect(event) {
 	// Disconnecting process
-
+	preventReconnect = true;
 	if (!bluetoothDevice) {
 		return;
 	}
@@ -1423,8 +1434,13 @@ function reconnect() {
 
 function onDisconnected(event) {
 	// Object event.target is Bluetooth Device getting disconnected.
-	log('> Bluetooth Device disconnected');
-	reconnect()
+	if(preventReconnect){
+		reconnect()
+	}
+	else{
+		log('> Bluetooth Device disconnected unintentionally. Reconnecting.');
+	}
+	
 }
 
 function sendValueWithCharacteristic() {
@@ -1465,9 +1481,9 @@ function handleNotifications(event) {
 			block.send();
 			break;
 		case eBlocktypes.MOMENTARY_DATA: //Momentary data
-			momentary7.data.set(block.data); //Copy received data
-			momentary7.unpack(); //Unpack raw data to object member variables
-			momentary7.callback();
+			momentary1.data.set(block.data); //Copy received data
+			momentary1.unpack(); //Unpack raw data to object member variables
+			momentary1.callback();
 			break;
 		case eBlocktypes.ACCESS: //Access
 			if(block.blockHeader.format == 7){ //Access status only
@@ -1658,8 +1674,8 @@ var svgDoc_AEC = null;
 
 //AEC IO
 function drawAEC(){
-	svgDoc_AEC.getElementById('i_X2_2').style.fillOpacity         = io5.io.i_SAFETY_PDS;
-	svgDoc_AEC.getElementById('o_X3_2').style.fillOpacity         = io5.io.o_RL1_C;
+	svgDoc_AEC.getElementById('i_X2-2').style.fillOpacity         = io5.io.i_SAFETY_PDS;
+	svgDoc_AEC.getElementById('o_X3-2').style.fillOpacity         = io5.io.o_RL1_C;
 	svgDoc_AEC.getElementById('i_X3-3').style.fillOpacity         = io5.io.i_DOORCLOSED;
 	svgDoc_AEC.getElementById('i_X3-5').style.fillOpacity         = io5.io.i_SAFETY_OK;
 	svgDoc_AEC.getElementById('o_X4-1').style.fillOpacity         = io5.io.o_RL2_C;
@@ -1845,7 +1861,7 @@ class Program {
 					const startY = 134.9375;
 			
 					// Extrapolate position
-					const extraPos = momentary7.status.position; // + momentary7.status.currentSpeed * (program.time_1s - momentary7.updateTime);
+					//const extraPos = momentary7.status.position; // + momentary7.status.currentSpeed * (program.time_1s - momentary7.updateTime);
 			
 					// Apply the cubic-bezier easing function to modify the interpolation factor
 					const easingFactor = cubicBezier(easing, this.dTime);
