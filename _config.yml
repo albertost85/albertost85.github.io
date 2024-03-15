@@ -138,6 +138,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  private:
+    output: true
+    permalink: /:collection/:name.html
 
 defaults:
   - scope:

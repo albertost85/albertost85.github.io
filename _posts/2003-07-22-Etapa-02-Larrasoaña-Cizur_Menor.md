@@ -37,7 +37,7 @@ Ahora, sí, has llegado a Pamplona, por fin una ciudad importante en tu camino. 
 
 Lo primero que te llama la atención es el estado del pórtico de la fachada principal. Los enormes bloques de piedra que conforman el bello arco neoclásico se encuentran levemente separados, y entre las juntas abiertas de los bloques crecen plantas trepadoras que bien podrían ser hiedra o hierbajos. Lo segundo que te llama la atención es que la puerta de entrada se encuentra cerrada. Tienes que entrar por una puerta lateral, que da acceso al claustro, donde hacen pagar por entrar. Tienen el detalle de dejar entrar gratis a los peregrinos, pero sólo al claustro, pues la catedral ya está cerrada. Sin ganas das una vuelta al claustro, echas un vistazo a la nave de la catedral por la rendija de una puerta lateral y vuelves a la calle.
 
-![Photograph of Pamplona Town Hall (SpaiN)](https://4.bp.blogspot.com/-di0yrP2TVgg/VII_7EsPNlI/AAAAAAAABaM/puNOIzGIHRs/s1600/02003.jpg){: height="284" }
+![Photograph of Pamplona Town Hall (Spain)](https://4.bp.blogspot.com/-di0yrP2TVgg/VII_7EsPNlI/AAAAAAAABaM/puNOIzGIHRs/s1600/02003.jpg){: height="284" }
 _Ayuntamiento de Pamplona_
 
 No es la primera vez que visitas Pamplona, pero el entramado de calles que conforman el casto antiguo acaba despistándote hasta que encuentras de nuevo las señales del camino. Siguiéndolas, y dejando atrás el ayuntamiento, abandonas el casco antiguo en un punto flanqueado por verdes avenidas y edificaciones más modernas. Sin embargo, antes de abandonar la sobra de esos altos edificios, el mundo antiguo hace de nuevo su aparición condensado en la Ciudadela de Pamplona. A juzgar por lo que tardas en bordearla , te parece una construcción de dimensiones enormes.
