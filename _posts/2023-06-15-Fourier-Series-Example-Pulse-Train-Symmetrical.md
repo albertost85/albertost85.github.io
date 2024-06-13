@@ -68,7 +68,7 @@ sin(πn/2)/(πn) = 1/2 * sin(πn/2)/(πn/2) = sinc(πn/2) * sinc(n/2)
 #### Coefficient values
 To give values to the coefficients d_n, we replace the value of n by a series of natural integers. In this case, the only problem is the value 0, which is undefined; however, by taking the limit, it is easy to see that it is 1 (by applying L'Hôpital's rule, or considering the identical slopes of the functions sin(n) and n at the origin).
 
-| $n$ | $\sinc(n/2) = (2/πn) \cdot sin(πn/2)$ | $d_n=1/2 \cdot \sinc(n/2)$ |
+| $n$ | $sinc(n/2) = (2/πn) \cdot sin(πn/2)$ | $d_n=1/2 \cdot sinc(n/2)$ |
 |-----|-----------------|--------|
 | 0   | 1               | 1/2    |
 | 1   | 2/π             | 1/π    |
