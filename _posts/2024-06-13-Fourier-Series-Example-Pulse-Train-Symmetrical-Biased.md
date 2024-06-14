@@ -83,7 +83,7 @@ Expressed in terms of the sinc function:
 d_n = \frac{\pi n}{j 2} \frac{\sin^2\left( \frac{\pi n}{2}\right)}{\left(\frac{\pi n}{2}\right)^2}= \frac{\pi n}{j 2} sinc^2\left( \frac{\pi n}{2} \right) = \frac{\pi n}{j 2} sinc_n^2\left( \frac{n}{2} \right)
 \end{equation}
 
-![Graphic representation of the coefficients $d_n$](discretefunctionsinc2n2.png)
+![Graphic representation of the coefficients $d_n$](discretefunctionpinsinc2n22j.png)
 
 #### Fourier Series
 Substituting into the Fourier transform expression:
@@ -112,16 +112,16 @@ f(t)= \frac{\cancel{2} \pi}{ \cancel{2}} \sum_{n=0}^\infty n sinc_n^2\left( \fra
 #### Series Values
 We tabulate some values of the series:
 
-| $n$ | $sinc_n^2 \left( \frac{n}{2} \right) = \frac{4}{\pi^2 n^2} \sin^2\left( \frac{\pi n}{2} \right)$ | $\sin\left( 2 \pi n f_0 t \right)$ |
+| $n$ | $n \pi sinc_n^2 \left( \frac{n}{2} \right)$ | $\sin\left( 2 \pi n f_0 t \right)$ |
 |----|----|----|
 | 0 | 1 | 0 |
-| 1 | $\frac{4}{\pi^2}$ | $\sin(2 \pi f_0 t)$ |
+| 1 | $\frac{4}{\pi}$ | $\sin(2 \pi f_0 t)$ |
 | 2 | 0 | $\sin(4 \pi f_0 t)$ |
-| 3 | $\frac{4}{3^2 \pi^2}$ | $\sin(6 \pi f_0 t)$ |
+| 3 | $\frac{4}{3 \pi}$ | $\sin(6 \pi f_0 t)$ |
 | 4 | 0 | $\sin(8 \pi f_0 t)$ |
-| 5 | $\frac{4}{5^2 \pi^2}$ | $\sin(10 \pi f_0 t)$ |
+| 5 | $\frac{4}{5 \pi}$ | $\sin(10 \pi f_0 t)$ |
 | 6 | 0 | $\sin(12 \pi f_0 t)$ |
-| 7 | $\frac{4}{7^2 \pi^2}$ | $\sin(14 \pi f_0 t)$ |
+| 7 | $\frac{4}{7 \pi}$ | $\sin(14 \pi f_0 t)$ |
 
 
 #### Summation
@@ -138,4 +138,7 @@ As we add terms to the series, it increasingly resembles the original signal.
 
 
 ### Conclussions
-The signal in the previous example was built upon a Fourier Series made up of fundamental cosinus functions. This, besides similary, is build up by fundamental sinus functions.
+#### Parity of a function
+The signal in the previous example (pair) was built upon a Fourier Series made up of fundamental cosinus functions. This (odd), besides similary, is build up by fundamental sinus functions.
+#### Mean value of a function
+In contrast to the previous example where the signal was not centered at zero, resulting in a non-zero first frequency component (which was the average amplitude of the signal), the current signal is centered at zero. Consequently, the first frequency component is zero. This centering of the signal simplifies the analysis and ensures that the DC component is null, emphasizing the symmetrical nature of the signal around the origin. Additionally, the Fourier series representation highlights the importance of symmetry in simplifying the frequency domain analysis, demonstrating that signals centered at zero tend to have more straightforward Fourier series with zero DC components. This property is particularly useful in applications where the elimination of the DC offset is desirable for signal processing tasks.
