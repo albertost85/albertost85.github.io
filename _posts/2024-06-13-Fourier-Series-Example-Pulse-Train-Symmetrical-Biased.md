@@ -7,7 +7,7 @@ tags: [Signals, Signal processing, Fourier Series]
 math: true
 img_path: /assets/img/
 ---
-This example can be developed on the blackboard for 30 to 50 minutes, depending on how thorough the explanations given to the students are.
+This example can be developed on the blackboard for 20 to 30 minutes, if followed by a previous exmample.
 
 ## Example: Fourier series of a symmetrical bipolar square pulse train
 

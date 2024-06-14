@@ -56,13 +56,13 @@ Knowing that the fundamental frequency $f_0$ is the inverse of the period $f_0=T
 #### Complex Expression of the Sine
 If we recall the expression of the sine as a subtraction of complex exponentials (equ:trig_sin_exp) and the properties of an odd function:
 \begin{equation}
-d_n = (-1/πn) * sin(-πn/2) = sin(πn/2)/(πn)
+d_n = (-1/πn) \cdot sin(-πn/2) = sin(πn/2)/(πn)
 \end{equation}
 
 #### Cardinal sine
 Another way to write the previous function is as a normalized cardinal sine function, defined by its application in signal theory.
 \begin{equation}
-sin(πn/2)/(πn) = 1/2 * sin(πn/2)/(πn/2) = sinc(πn/2) * sinc(n/2)
+sin(πn/2)/(πn) = 1/2 \cdot sin(πn/2)/(πn/2) = sinc(πn/2) \cdot sinc(n/2)
 \end{equation}
 
 #### Coefficient values
@@ -87,7 +87,7 @@ The sinc function is an even function; for negative values of $n$ it takes the s
 #### Fourier series
 Now that we have the coefficients $d_n$, we can write the terms of the Fourier series by applying the expression. 
 \begin{equation}
-f(t) = \left[... -1/(3π) \cdot e^{-j2π3f0t} + 1/π * e^{-j2πf0t} + 1/2 + 1/π \cdot e^{j2πf0t} -1/(3π) \cdot e^{j2π3f0t} + ...\right]
+f(t) = \left[... -1/(3π) \cdot e^{-j2π3f0t} + 1/π \cdot e^{-j2πf0t} + 1/2 + 1/π \cdot e^{j2πf0t} -1/(3π) \cdot e^{j2π3f0t} + ...\right]
 \end{equation}
 
 #### Real function of the Fourier series
@@ -96,19 +96,19 @@ Although the previous expression is already a Fourier series, it is a sum of com
 #### Group terms
 We can group symmetrical terms:
 \begin{equation}
-f(t) = [1/2 + 1/π * (e^(j2πf0t)+e^(-j2πf0t)) - 2/(3π) * (e^(j2π3f0t)+e^(-j2π3f0t)) + ...]
+f(t) = [1/2 + 1/π \cdot (e^(j2πf0t)+e^(-j2πf0t)) - 2/(3π) \cdot (e^(j2π3f0t)+e^(-j2π3f0t)) + ...]
 \end{equation}
 
 #### Series formed by cosines
 Now it's easier to see that the series is formed by cosines. Applying the expression of the cosine as the sum of complex exponentials:
 \begin{equation}
-f(t) = [1/2 + 2/π * (e^(j2πf0t)+e^(-j2πf0t))/2 - 2/(3π) * (e^(j6πf0t)+e^(-j2π3f0t))/2 + ...]
-      = [1/2 + 2/π * cos(2πf0t) - 2/(3π) * cos(6πf0t) + ...]
+f(t) = [1/2 + 2/π \cdot (e^(j2πf0t)+e^(-j2πf0t))/2 - 2/(3π) \cdot (e^(j6πf0t)+e^(-j2π3f0t))/2 + ...]
+      = [1/2 + 2/π \cdot cos(2πf0t) - 2/(3π) * cos(6πf0t) + ...]
 \end{equation}
 
 #### Summation
 \begin{equation}
-f(t) = 1/2 * \sum_{n=1}^\infty ((-2(-1)^n) / (2n-1)\pi) * cos(2 * (2n-1) * \pi f0 t)
+f(t) = 1/2 \cdot \sum_{n=1}^\infty ((-2(-1)^n) / (2n-1)\pi) \cdot cos(2 \cdot (2n-1) \cdot \pi f0 t)
 \end{equation}
 
 #### Graphical representation**
