@@ -3,7 +3,7 @@ layout: post
 title: Comment on 48 Laws of Power, from Graham Greene
 date: 2024-06-20 14:17:00 +0200
 categories: [Books]
-tags: [Books, English, Hidden]
+tags: [Books]
 img_path: /assets/img/
 secret: true
 ---
@@ -18,7 +18,7 @@ I disagree with a few rules, very few, because I believe they are counterproduct
 Others, I abhor, but I do not deny their utility; simply, conquering power is not in my worldview. My vision consists of being able to live outside power. Create my own power outside of society. Threatening enough that it is not worth challenging, scarce enough not to attract attention.
 
 ## How to cite
-Greene, Robert. (1998). Las 48 leyes del poder [Kindle](Spanish Edition). Espasa.
+Greene, Robert. (1998). Las 48 leyes del poder (Spanish Edition). Espasa.
 
 ## Comments on chapters
 

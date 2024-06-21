@@ -3,7 +3,7 @@ layout: post
 title: Comentario sobre Frankenstein, escrito por Mary Shelley
 date: 2024-06-20 14:17:00 +0200
 categories: [Books]
-tags: [Books, Spanish, Hidden]
+tags: [Books]
 img_path: /assets/img/
 secret: true
 ---
