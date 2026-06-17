@@ -1,7 +1,6 @@
 # Bundler cache
 .bundle
 vendor/
-Gemfile.lock
 .sass-cache/
 
 # Jekyll cache
