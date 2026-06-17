@@ -23,10 +23,13 @@ title: Farewell Way! # the main title
 tagline: The way is made by walking! # it will display as the sub-title
 
 description: This is a personal webpage designed to link content created on other platforms and organize thoughts and research on technical topics. The webpage is intended to reflect a personal way of learning and understanding things, with the aim of creating a comprehensive resource for both the owner and visitors to the site.
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://www.farewellway.com"
+# jekyll-sitemap to generate automatically sitemap
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 github:
   username: albertost85 # change to your github username
@@ -47,13 +50,13 @@ social:
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/albertost85/
 
-google_site_verification: # fill in to your verification string
+google_site_verification: gv-iuhby2zhlhvkye.dv.googlehosted.com. # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: # fill in your Google Analytics ID
+  id: G-N6MWWZL977 # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -85,15 +88,15 @@ avatar: /assets/images/logo.png
 # boolean type, the global switch for TOC in posts.
 toc: true
 
-comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+comments: 
+  active: utterances # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
+    repo: albertost85/albertost85.github.io # <gh-username>/<repo>
+    issue_term: pathname # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo: # <gh-username>/<repo>
@@ -135,6 +138,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  private:
+    output: true
+    permalink: /:collection/:name.html
 
 defaults:
   - scope:
