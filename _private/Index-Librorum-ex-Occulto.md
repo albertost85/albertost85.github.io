@@ -4,7 +4,7 @@ title: Index librorum ex occulto
 is_index: true
 ---
 
-This act as a hidden index for book posts.
+This act as a hidden index for posts.
 <ul>
 {% assign sorted_private_posts = site.private | sort: 'date' | reverse %}
 {% for item in sorted_private_posts %}
