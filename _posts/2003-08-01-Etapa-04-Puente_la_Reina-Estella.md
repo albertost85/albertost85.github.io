@@ -22,17 +22,17 @@ El resto del camino hasta Estella discurre por planicies entre campos de cultivo
 
 A la entrada de Estella te recibe la iglesia del Santo Sepulcro, un templo románico con rasgos templarios. Junto a la iglesia discurre la calle mayor, que se adentra en la población, siguiendo el margen del río.
 
-![Iglesia del Santo Sepulcro, Estella](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/04001.jpg)
+![Iglesia del Santo Sepulcro, Estella](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5wlcDOBqzokcwa6vEKtaDEaD9opb-MM9e3RGIw6CG4PfpxKqXOlTGurSmBDZmOk6b1Ta40MBcDODvq8BObdS7K5b11YFkwVTg9MNLKG4vPjAOG_dqD_YyoHXuaJNubVe7Mln19yQuBPdY/s1600/04001.jpg)
 _Iglesia del Santo Sepulcro en Estella_
 
 El albergue está en esta misma calle. Llegas temprano, así que no tienes problema para encontrar alojamiento, aunque ya hay bastantes peregrinos en la entrada. Dejas la mochila y te alejas de la calle principal para acercarte al río. Te encuentras muy fatigado, ¡y ha sido una etapa corta! La fatiga mental es aún mayor, hasta el punto de que, por momentos, te arrepientes de no haber bebido el agua del río Salado. Das por hecho que así no llegarás nunca a Santiago, pero tal vez puedas aguantar un día más, y para eso necesitas comer algo.
 
-![Puente Picudo, Estella](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/04002.jpg)
+![Puente Picudo, Estella](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuktozZQ0Erjimw4TZUBDbY7veDz4q4G9Zs-fecLhq-YHZsz8KnDit0MdDfsHh9Vbnfh1AuBE2UqewdGnVeGuP7NnRcshNXfcIUSkmqTfuri-WPaqB-m7J4c70a4jk7yw1mRr3KBJBuo2z/s1600/04002.jpg)
 _Puente Picudo en Estella_
 
 Cruzas el puente y entras en el primer supermercado que encuentras. Allí, unos italianos con aspecto de peregrinos están comprando, nombrando en italiano, a la par que señalan con el dedo, los productos del mostrador que se les antojan. Así aprendes que «salami» se pronuncia «salami» en italiano, pero de forma musical; una información completamente inútil. A la salida, la iglesia de San Miguel impresiona por su ubicación sobre una roca en lo alto.
 
-![Iglesia de San Miguel, Estella](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/04003.jpg)
+![Iglesia de San Miguel, Estella](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4JheCKnHXmvEV3FhlzB0XWiAIF9WhdxfN5PHQXDa4pGiJfNxkodFzR2tCHlTKeyuFvy2VJWQ6F2dgTOY_tQKu-c0-6QnNMhrO_skTtutl3RwiIlbf3E8QKiodMb8Fl-EH46gRimqZ0hGE/s1600/04003.jpg)
 _Iglesia de San Miguel en Estella_
 
 Son las fiestas de Estella o están a punto de comenzar; el ambiente en las calles es festivo. Cerca de la estación, en una zona amplia fuera del casco antiguo, llena de terrazas, es donde ves más gente. Te sorprende ver una bandera del PNV. Al contrario de lo que has visto al norte de Pamplona, la portadora de dicha bandera es una chica agraciada; ni siquiera parece que sus padres sean parientes. Probablemente venga de fuera. ¡Cómo ha degenerado el carlismo!

@@ -14,7 +14,7 @@ Al pasar por el ayuntamiento, todavía son visibles los restos que ha dejado hac
 
 El camino hasta el famoso monasterio de Irache se te hace llevadero, pues todo transcurre por calzada urbana. No en vano, el casco urbano de Estella está unido con el de Ayegui. El monasterio es conocido por su fuente, accesible a todo aquel que pase junto al camino, de la que mana vino tinto.
 
-![Fuente de vino en Bodegas Irache](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/05001.jpg)  
+![Fuente de vino en Bodegas Irache](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBfO752gZI1kyBeTMHe7pblpsS48FO8GkMlCHL2qFwK6QLTtEFpzJHN3dfZ2i-YT66Bv6jFFnDqU3N3NF21NYxBwa8BqiZmURLfbT19_coQygjQePRprAl3tJ-klTnjkM2iDQIlZv_SKU9/s1600/CS031.jpg)  
 _Fuente de vino en Bodegas Irache_
 
 La fatiga ha cerrado tu estómago, por lo que el vino te sabe extremadamente áspero. Estás tan cansado que sientes ganas de llorar de impotencia y decides no continuar. Te tumbas un poco apartado del camino, en la hierba de un campo. Miras al cielo azul plomo en el que la luz aún no despunta y, poco a poco, dejas de notar las punzadas de las piedras del camino.
@@ -29,7 +29,7 @@ Cuando abres los ojos, un azul claro y brillante te deslumbra. Han pasado varias
 
 A pesar de madrugar, has perdido mucho tiempo; pero no te importa. Paso a paso, te vas encontrando mejor y más habituado a caminar. Cuando llegas a la Fuente del Moro, a los pies de la loma que corona el Castillo de Deyo, es casi mediodía y ya no queda vino en tu cantimplora. Desde la vecina Villamayor de Monjardín hasta Los Arcos, hay 12 km según el plano; más de los que llevas recorridos. Llenas la cantimplora de agua, más agradable que el vino al paladar, pero no al espíritu, y emprendes este último tramo con ánimo templado.
 
-![Fuente del Moro con el Castillo de Deyo al fondo](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/05002.jpg)  
+![Fuente del Moro con el Castillo de Deyo al fondo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmrAcjNuXt4r_TtcmBkx4iPxhfsL5b2Inz0MELqyIFPwl6F2rLzEySXwW4GJD8H_N8lGrZ_XMX3LJyYj8YCRirUbIxUYbvh2CMI-sW36X6mPXnHcnCTUR95QO9Tw6vw882VSpf_br026oY/s1600/CS032.jpg)  
 _Fuente del Moro con el Castillo de Deyo al fondo_
 
 Comes haciendo una parada, pues se te echa la tarde encima. De todas formas, Los Arcos es un pueblo pequeño, piensas que no tendrás muchas cosas que hacer por la tarde, y el único problema sería quedarte sin plaza en el albergue; problema relativo, claro, pues es verano y siempre puedes dormir al aire libre, lejos de los ronquidos de otros peregrinos.
@@ -38,7 +38,7 @@ El resto del camino hasta Los Arcos se te hace corto. Consideras cómo estabas a
 
 Los Arcos te sorprende: es un pueblo pequeño, sí, pero su iglesia es de grandes proporciones. Su ubicación, tras una verde y cuidada explanada junto al río Odrón, ofrece una visión perfecta de la torre.
 
-![Iglesia de Santa María, puente y prado de Los Arcos](http://4.bp.blogspot.com/--GcdwFFkcC0/U3Nwbe80sMI/AAAAAAAAAO8/vKQOvxI4fJg/s1600/05003.jpg)  
+![Iglesia de Santa María, puente y prado de Los Arcos](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtMSD0yfxFUSXVZ0q-kRxiiESrmiV0fZNiKDBlllYnojIkdafZucEZuUFWRJEOeLMWPCBsEu9Af3XfdpoXJsnHP0xzmqe6vr7ypBj6ZBDvEYarhEgEfhMQBjC908tl82UrUCzJ4MWJZcdj/s1600/CS033.jpg)  
 _Iglesia de Santa María, puente y prado de Los Arcos_
 
 Junto a la explanada se encuentra el moderno albergue de peregrinos; estás de suerte, todavía hay plazas. No solo eso: tienes derecho a entrada en las piscinas municipales; allí es donde pasas la tarde, bañándote y charlando con otros peregrinos que has conocido en el camino.
